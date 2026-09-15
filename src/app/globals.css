@@ -241,9 +241,13 @@ body {
 /* ---------------------------------------------------------------- */
 
 .btn-sweep {
+  display: inline-block;
   position: relative;
   overflow: hidden;
   isolation: isolate;
+  /* backface-visibility évite un scintillement (flicker) du balayage
+     sur certains moteurs de rendu lors de l'animation de transform. */
+  backface-visibility: hidden;
 }
 
 .btn-sweep::before {
@@ -253,11 +257,18 @@ body {
   background: currentColor;
   transform: translateX(-101%);
   transition: transform 0.45s cubic-bezier(0.65, 0, 0.35, 1);
-  z-index: -1;
-  opacity: 0.08;
+  z-index: 0;
+  opacity: 0.12;
+  pointer-events: none;
 }
 
-.btn-sweep:hover::before {
+.btn-sweep > * {
+  position: relative;
+  z-index: 1;
+}
+
+.btn-sweep:hover::before,
+.btn-sweep:focus-visible::before {
   transform: translateX(0);
 }
 
@@ -341,5 +352,132 @@ body {
   }
 }
 
+/* ---------------------------------------------------------------- */
+/* Halo lumineux suivant le curseur (sections sombres)                */
+/* ---------------------------------------------------------------- */
+
+.cursor-glow {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.cursor-glow::before {
+  content: "";
+  position: absolute;
+  top: var(--glow-y, 50%);
+  left: var(--glow-x, 50%);
+  width: 560px;
+  height: 560px;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(circle, var(--gold) 0%, transparent 65%);
+  opacity: var(--glow-opacity, 0);
+  transition: opacity 0.4s ease;
+  filter: blur(10px);
+}
+
+/* ---------------------------------------------------------------- */
+/* Boutons — micro-décalage magnétique                                */
+/* ---------------------------------------------------------------- */
+
+.btn-magnetic {
+  display: inline-block;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  transform: translate(var(--mx, 0), var(--my, 0));
+}
+
+/* ---------------------------------------------------------------- */
+/* Cartes — légère inclinaison 3D au survol                          */
+/* ---------------------------------------------------------------- */
+
+.tilt-card {
+  transform: perspective(800px) rotateX(var(--tilt-x, 0deg)) rotateY(var(--tilt-y, 0deg));
+  transition: transform 0.3s ease;
+  transform-style: preserve-3d;
+}
+
+/* ---------------------------------------------------------------- */
+/* Marquee défilant — mots-clés                                      */
+/* ---------------------------------------------------------------- */
+
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marquee 28s linear infinite;
+}
+
+.marquee-wrapper:hover .marquee-track {
+  animation-play-state: paused;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track {
+    animation: none;
+  }
+}
+
+/* ---------------------------------------------------------------- */
+/* Trait qui se dessine (SVG-like) pour séparateurs de section        */
+/* ---------------------------------------------------------------- */
+
+.draw-line {
+  position: relative;
+  overflow: hidden;
+}
+
+.draw-line::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 1px;
+  width: 100%;
+  background: var(--gold);
+  transform-origin: left;
+  transform: scaleX(0);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .draw-line.is-visible::after {
+    animation: draw 1.1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    animation-delay: var(--reveal-delay, 0ms);
+  }
+}
+
+@keyframes draw {
+  to {
+    transform: scaleX(1);
+  }
+}
+
+/* ---------------------------------------------------------------- */
+/* Chiffres — compteur discret en fondu-glissement séquentiel         */
+/* ---------------------------------------------------------------- */
+
+@media (prefers-reduced-motion: no-preference) {
+  .float-soft {
+    animation: float-soft 6s ease-in-out infinite;
+  }
+}
+
+@keyframes float-soft {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
 
 

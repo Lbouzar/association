@@ -5,6 +5,8 @@ import Section from "@/components/Section";
 import Reveal from "@/components/Reveal";
 import ScrollIndicator from "@/components/ScrollIndicator";
 import EditorialList from "@/components/EditorialList";
+import CursorGlow from "@/components/CursorGlow";
+import MagneticButton from "@/components/MagneticButton";
 import { useLocale } from "@/components/LocaleProvider";
 import { associationInfo } from "@/lib/site-data";
 
@@ -15,6 +17,7 @@ export default function AssociationContent() {
   return (
     <div>
       <section className="surface-dark relative flex min-h-[85vh] items-center overflow-hidden">
+        <CursorGlow />
         <div className="pointer-events-none absolute inset-0 opacity-[0.06]">
           <span className="drift absolute -right-16 -top-16 font-serif text-[32rem] leading-none text-ivory">
             2
@@ -145,6 +148,7 @@ export default function AssociationContent() {
       </Section>
 
       <section className="surface-dark relative overflow-hidden py-28 sm:py-36">
+        <CursorGlow />
         <div className="pointer-events-none absolute inset-0 opacity-[0.05]">
           <span className="drift absolute -bottom-32 -right-16 font-serif text-[26rem] leading-none text-ivory">
             2
@@ -166,24 +170,30 @@ export default function AssociationContent() {
               ))}
             </div>
             <div className="mt-10 flex flex-wrap gap-4">
-              <Link
-                href="/contact"
-                className="btn-sweep border border-gold bg-gold px-7 py-3.5 text-xs font-medium uppercase tracking-widest text-pine transition-colors duration-300"
-              >
-                {a.primaryCta}
-              </Link>
-              <Link
-                href="/contact"
-                className="btn-sweep border border-ivory/40 px-7 py-3.5 text-xs font-medium uppercase tracking-widest text-ivory transition-colors duration-300 hover:border-gold hover:text-gold"
-              >
-                {a.secondaryCta}
-              </Link>
-              <Link
-                href="/contact"
-                className="btn-sweep border border-ivory/40 px-7 py-3.5 text-xs font-medium uppercase tracking-widest text-ivory transition-colors duration-300 hover:border-gold hover:text-gold"
-              >
-                {a.additionalCta}
-              </Link>
+              <MagneticButton>
+                <Link
+                  href="/contact"
+                  className="btn-sweep border border-gold bg-gold px-7 py-3.5 text-xs font-medium uppercase tracking-widest text-pine transition-colors duration-300"
+                >
+                  {a.primaryCta}
+                </Link>
+              </MagneticButton>
+              <MagneticButton>
+                <Link
+                  href="/contact"
+                  className="btn-sweep border border-ivory/40 px-7 py-3.5 text-xs font-medium uppercase tracking-widest text-ivory transition-colors duration-300 hover:border-gold hover:text-gold"
+                >
+                  {a.secondaryCta}
+                </Link>
+              </MagneticButton>
+              <MagneticButton>
+                <Link
+                  href="/contact"
+                  className="btn-sweep border border-ivory/40 px-7 py-3.5 text-xs font-medium uppercase tracking-widest text-ivory transition-colors duration-300 hover:border-gold hover:text-gold"
+                >
+                  {a.additionalCta}
+                </Link>
+              </MagneticButton>
             </div>
           </Reveal>
         </div>

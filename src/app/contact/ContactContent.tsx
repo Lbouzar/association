@@ -4,6 +4,7 @@ import ContactForm from "@/components/ContactForm";
 import MapEmbed from "@/components/MapEmbed";
 import Reveal from "@/components/Reveal";
 import ScrollIndicator from "@/components/ScrollIndicator";
+import CursorGlow from "@/components/CursorGlow";
 import { useLocale } from "@/components/LocaleProvider";
 import { companyInfo } from "@/lib/site-data";
 
@@ -14,6 +15,7 @@ export default function ContactContent() {
   return (
     <div>
       <section className="surface-dark relative flex min-h-[60vh] items-center overflow-hidden">
+        <CursorGlow />
         <div className="pointer-events-none absolute inset-0 opacity-[0.06]">
           <span className="drift absolute -right-16 -top-20 font-serif text-[28rem] leading-none text-ivory">
             2

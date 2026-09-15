@@ -22,9 +22,6 @@ export default function Header() {
 
   const navLinks = [
     { label: t.nav.home, href: "/" },
-    { label: t.nav.approach, href: "/approche" },
-    { label: t.nav.services, href: "/services" },
-    { label: t.nav.team, href: "/equipe" },
     { label: t.nav.association, href: "/association" },
     { label: t.nav.contact, href: "/contact" },
   ];

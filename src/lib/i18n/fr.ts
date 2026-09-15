@@ -3,9 +3,6 @@ import type { Dictionary } from "./types";
 const fr: Dictionary = {
   nav: {
     home: "Accueil",
-    approach: "Approche",
-    services: "Services",
-    team: "Équipe",
     association: "Association",
     contact: "Contact",
     contactCta: "Nous contacter",

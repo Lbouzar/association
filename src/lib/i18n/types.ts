@@ -5,9 +5,6 @@ export type ListItem = { title: string; description: string };
 export type Dictionary = {
   nav: {
     home: string;
-    approach: string;
-    services: string;
-    team: string;
     association: string;
     contact: string;
     contactCta: string;
