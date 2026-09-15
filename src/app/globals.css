@@ -1,0 +1,345 @@
+@import "tailwindcss";
+
+:root {
+  /* Palette institutionnelle A2PA */
+  --pine: #1f392b;       /* Vert sapin — texte, monogramme, éléments institutionnels */
+  --ivory: #f0e1d1;      /* Beige ivoire — fond principal */
+  --gold: #b1905c;       /* Or mat / beige doré — accents, détails premium */
+
+  --background: var(--ivory);
+  --background-alt: #e8d5c0;
+  --foreground: var(--pine);
+  --foreground-muted: #4d5f52;
+  --line: rgba(31, 57, 43, 0.16);
+  --accent: var(--gold);
+  --accent-soft: rgba(177, 144, 92, 0.14);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-background-alt: var(--background-alt);
+  --color-foreground: var(--foreground);
+  --color-foreground-muted: var(--foreground-muted);
+  --color-line: var(--line);
+  --color-accent: var(--accent);
+  --color-accent-soft: var(--accent-soft);
+  --color-pine: var(--pine);
+  --color-ivory: var(--ivory);
+  --color-gold: var(--gold);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --font-serif: var(--font-playfair);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+}
+
+::selection {
+  background: var(--accent);
+  color: var(--ivory);
+}
+
+.surface-alt {
+  background-color: var(--background-alt);
+}
+
+.surface-dark {
+  background-color: var(--pine);
+  color: var(--ivory);
+}
+
+.divider {
+  border-color: var(--line);
+}
+
+.accent-text {
+  color: var(--accent);
+}
+
+.btn-outline {
+  border: 1px solid var(--foreground);
+  color: var(--foreground);
+  transition: border-color 0.25s ease, color 0.25s ease, background-color 0.25s ease;
+}
+
+.btn-outline:hover {
+  border-color: var(--gold);
+  background-color: var(--gold);
+  color: var(--ivory);
+}
+
+.btn-solid {
+  background: var(--pine);
+  color: var(--ivory);
+  transition: background-color 0.25s ease, transform 0.25s ease;
+}
+
+.btn-solid:hover {
+  background: var(--gold);
+}
+
+.link-underline {
+  position: relative;
+  padding-bottom: 2px;
+  background-image: linear-gradient(var(--gold), var(--gold));
+  background-size: 0% 1px;
+  background-position: left bottom;
+  background-repeat: no-repeat;
+  transition: background-size 0.3s ease;
+}
+
+.link-underline:hover {
+  background-size: 100% 1px;
+}
+
+/* ---------------------------------------------------------------- */
+/* Animations au défilement                                          */
+/* ---------------------------------------------------------------- */
+
+@media (prefers-reduced-motion: no-preference) {
+  .reveal {
+    opacity: 0;
+    transform: translateY(28px);
+    transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+      transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    transition-delay: var(--reveal-delay, 0ms);
+    will-change: opacity, transform;
+  }
+
+  .reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .reveal-scale {
+    opacity: 0;
+    transform: scale(0.96);
+    transition: opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1),
+      transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+    transition-delay: var(--reveal-delay, 0ms);
+  }
+
+  .reveal-scale.is-visible {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  .reveal-line {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .reveal-line::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: var(--ivory);
+    transform: scaleX(1);
+    transform-origin: right;
+    transition: transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+    transition-delay: var(--reveal-delay, 0ms);
+  }
+
+  .reveal-line.is-visible::after {
+    transform: scaleX(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal,
+  .reveal-scale {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.grow-underline {
+  position: relative;
+}
+
+.grow-underline::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  height: 1px;
+  width: 100%;
+  background: var(--gold);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s ease;
+}
+
+.grow-underline:hover::after {
+  transform: scaleX(1);
+}
+
+/* ---------------------------------------------------------------- */
+/* Grain de fond subtil                                              */
+/* ---------------------------------------------------------------- */
+
+.grain {
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  opacity: 0.035;
+  mix-blend-mode: multiply;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* ---------------------------------------------------------------- */
+/* Barre de progression de scroll                                    */
+/* ---------------------------------------------------------------- */
+
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 2px;
+  background: var(--gold);
+  z-index: 60;
+  transition: width 0.1s linear;
+}
+
+/* ---------------------------------------------------------------- */
+/* Halo lumineux au survol (cartes, listes)                          */
+/* ---------------------------------------------------------------- */
+
+.glow-hover {
+  position: relative;
+  transition: background-color 0.4s ease;
+}
+
+.glow-hover::before {
+  content: "";
+  position: absolute;
+  top: var(--mouse-y, 50%);
+  left: var(--mouse-x, 50%);
+  width: 320px;
+  height: 320px;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(circle, var(--accent-soft) 0%, transparent 70%);
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  pointer-events: none;
+}
+
+.glow-hover:hover::before {
+  opacity: 1;
+}
+
+/* ---------------------------------------------------------------- */
+/* Boutons — effet de balayage (sweep)                                */
+/* ---------------------------------------------------------------- */
+
+.btn-sweep {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.btn-sweep::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: currentColor;
+  transform: translateX(-101%);
+  transition: transform 0.45s cubic-bezier(0.65, 0, 0.35, 1);
+  z-index: -1;
+  opacity: 0.08;
+}
+
+.btn-sweep:hover::before {
+  transform: translateX(0);
+}
+
+/* ---------------------------------------------------------------- */
+/* Titres — soulignement qui se dessine au survol                    */
+/* ---------------------------------------------------------------- */
+
+.title-hover {
+  display: inline-block;
+  transition: letter-spacing 0.4s ease, color 0.4s ease;
+}
+
+.title-hover:hover {
+  letter-spacing: 0.01em;
+  color: var(--gold);
+}
+
+/* ---------------------------------------------------------------- */
+/* Filigrane "2" — légère dérive au scroll                            */
+/* ---------------------------------------------------------------- */
+
+@media (prefers-reduced-motion: no-preference) {
+  .drift {
+    animation: drift 18s ease-in-out infinite alternate;
+  }
+}
+
+@keyframes drift {
+  0% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  100% {
+    transform: translate3d(-12px, 16px, 0) scale(1.02);
+  }
+}
+
+/* ---------------------------------------------------------------- */
+/* Cartes — léger relief au survol                                   */
+/* ---------------------------------------------------------------- */
+
+.lift-hover {
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s ease;
+}
+
+.lift-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 40px -20px rgba(31, 57, 43, 0.35);
+}
+
+/* ---------------------------------------------------------------- */
+/* Numéros de liste — agrandissement discret au survol                */
+/* ---------------------------------------------------------------- */
+
+.num-hover {
+  display: inline-block;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), color 0.35s ease;
+}
+
+.num-hover:hover {
+  transform: scale(1.35);
+}
+
+/* ---------------------------------------------------------------- */
+/* Transition de page (fondu doux à l'arrivée)                       */
+/* ---------------------------------------------------------------- */
+
+@media (prefers-reduced-motion: no-preference) {
+  .page-transition {
+    animation: page-fade 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+}
+
+@keyframes page-fade {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+
