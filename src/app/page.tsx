@@ -152,14 +152,6 @@ export default function Home() {
         </p>
       </Section>
 
-      {/* EQUIPE */}
-      <Section
-        id="equipe"
-        eyebrow={home.teamEyebrow}
-        title={home.teamTitle}
-        description={home.teamDescription}
-      />
-
       {/* TEASER ASSOCIATION */}
       <Section
         tone="soft"

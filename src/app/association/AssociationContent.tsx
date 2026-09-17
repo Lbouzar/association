@@ -47,7 +47,7 @@ export default function AssociationContent() {
           <Reveal delay={280}>
             <div className="mt-12 flex flex-col gap-4 sm:flex-row">
               <Link
-                href="/contact"
+                href="#mission"
                 className="btn-sweep border border-gold bg-gold px-7 py-3.5 text-center text-xs font-medium uppercase tracking-widest text-pine transition-colors duration-300"
               >
                 {a.heroPrimaryCta}
@@ -74,7 +74,7 @@ export default function AssociationContent() {
         </div>
       </Section>
 
-      <Section tone="soft" align="indent" eyebrow={a.missionEyebrow} title={a.missionTitle} description={a.missionIntro}>
+      <Section id="mission" tone="soft" align="indent" eyebrow={a.missionEyebrow} title={a.missionTitle} description={a.missionIntro}>
         <EditorialList items={a.missionPoints} />
         <p className="mt-10 max-w-xl text-sm italic leading-relaxed text-foreground-muted sm:ml-12">
           {a.missionNote}
