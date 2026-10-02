@@ -31,7 +31,6 @@ export default function AssociationContent() {
             <h1 className="mt-6 max-w-3xl font-serif text-4xl font-normal leading-[1.05] tracking-tight text-ivory sm:text-6xl">
               {associationInfo.name}
             </h1>
-            <p className="mt-3 text-sm font-medium text-ivory/60">{a.heroStatus}</p>
           </Reveal>
           <Reveal delay={150}>
             <p className="mt-8 max-w-2xl text-lg leading-relaxed text-ivory/75">

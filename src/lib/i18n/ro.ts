@@ -106,7 +106,6 @@ const ro: Dictionary = {
   },
   association: {
     heroEyebrow: "Asociație civică și culturală",
-    heroStatus: "Denumire provizorie; proces de înregistrare în curs",
     heroTitle:
       "Construim o sferă publică mai informată, participativă și transparentă.",
     heroParagraph1:

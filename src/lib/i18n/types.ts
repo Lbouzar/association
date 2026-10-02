@@ -47,7 +47,6 @@ export type Dictionary = {
   };
   association: {
     heroEyebrow: string;
-    heroStatus: string;
     heroTitle: string;
     heroParagraph1: string;
     heroParagraph2: string;

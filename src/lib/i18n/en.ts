@@ -106,7 +106,6 @@ const en: Dictionary = {
   },
   association: {
     heroEyebrow: "Civic & Cultural Association",
-    heroStatus: "Working title; registration process ongoing",
     heroTitle:
       "Building a more informed, participatory and transparent public sphere.",
     heroParagraph1:
