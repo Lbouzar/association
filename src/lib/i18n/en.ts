@@ -10,7 +10,7 @@ const en: Dictionary = {
   footer: {
     companyLabel: "Company",
     associationLabel: "Association",
-    navigationLabel: "Navigation",
+    legalStructureLabel: "Legal structure",
     rights: "All rights reserved.",
   },
   home: {

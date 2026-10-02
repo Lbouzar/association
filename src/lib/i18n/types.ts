@@ -12,7 +12,7 @@ export type Dictionary = {
   footer: {
     companyLabel: string;
     associationLabel: string;
-    navigationLabel: string;
+    legalStructureLabel: string;
     rights: string;
   };
   home: {

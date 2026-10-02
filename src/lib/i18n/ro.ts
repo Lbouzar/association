@@ -10,7 +10,7 @@ const ro: Dictionary = {
   footer: {
     companyLabel: "Companie",
     associationLabel: "Asociație",
-    navigationLabel: "Navigare",
+    legalStructureLabel: "Structură juridică",
     rights: "Toate drepturile rezervate.",
   },
   home: {
