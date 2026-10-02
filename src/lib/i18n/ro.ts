@@ -22,7 +22,7 @@ const ro: Dictionary = {
     heroSecondaryCta: "Descoperă abordarea noastră",
 
     introEyebrow: "Cine suntem",
-    introTitle: "Transformăm complexitatea politicilor publice în influență strategică",
+    introTitle: "Îi ajutăm pe partenerii noștri să înțeleagă ce contează și să acționeze",
     introParagraphs: [
       "Rolul nostru nu este doar să raportăm asupra mediului legislativ și politic. Îi ajutăm pe partenerii noștri să înțeleagă ce contează cu adevărat, să identifice unde pot avea un impact real și să dialogheze cu actorii potriviți, prin canalele instituționale adecvate la momentul potrivit.",
       "Combinăm analiza strategică cu sprijinul practic în domeniul afacerilor publice pentru a ajuta organizațiile să treacă de la incertitudine la claritate, de la claritate la influență și de la influență la rezultate măsurabile.",
@@ -279,6 +279,7 @@ const ro: Dictionary = {
     formHint: "Toate câmpurile marcate sunt obligatorii. Răspundem în 48 de ore lucrătoare.",
     coordinatesTitle: "Datele noastre de contact",
     addressLabel: "Adresă",
+    addressValue: "București, România (adresă în curs de confirmare)",
     emailLabel: "Email",
     phoneLabel: "Telefon",
     mapTitle: "Locația noastră",

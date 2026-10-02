@@ -110,6 +110,7 @@ export type Dictionary = {
     formHint: string;
     coordinatesTitle: string;
     addressLabel: string;
+    addressValue: string;
     emailLabel: string;
     phoneLabel: string;
     mapTitle: string;

@@ -22,7 +22,7 @@ const en: Dictionary = {
     heroSecondaryCta: "Explore our approach",
 
     introEyebrow: "Who we are",
-    introTitle: "Turning policy complexity into strategic influence",
+    introTitle: "Helping partners understand what matters and act on it",
     introParagraphs: [
       "Our role is not simply to report on the policy environment. It is to help partners understand what matters, determine where they can make a difference and engage with the right actors, through the right institutional channels, at the right moment.",
       "We combine strategic analysis with practical public affairs support to help organisations move from uncertainty to clarity, from clarity to influence and from influence to measurable results.",
@@ -279,6 +279,7 @@ const en: Dictionary = {
     formHint: "All required fields must be completed. We reply within 48 business hours.",
     coordinatesTitle: "Our contact details",
     addressLabel: "Address",
+    addressValue: "Bucharest, Romania (address to be confirmed)",
     emailLabel: "Email",
     phoneLabel: "Phone",
     mapTitle: "Our location",

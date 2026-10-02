@@ -24,7 +24,6 @@ export default function Footer() {
           <ul className="mt-4 space-y-2 text-sm text-ivory/70">
             <li>{companyInfo.name}</li>
             <li>{companyInfo.legalForm}</li>
-            <li>{companyInfo.address}</li>
           </ul>
         </div>
 

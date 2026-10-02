@@ -4,8 +4,6 @@
 export const companyInfo = {
   name: "A2PA",
   legalForm: "SRL",
-  siret: "CUI de completat",
-  address: "București, România (adresă de completat)",
   email: "contact@a2pa.ro",
   phone: "+40 7 00 00 00 00",
   mapEmbedUrl:
@@ -14,7 +12,7 @@ export const companyInfo = {
 
 export const associationInfo = {
   name: "Friends of A2PA",
-  legalForm: "Asociație română non-profit (înregistrare în curs)",
+  legalForm: "SRL",
   email: "association@a2pa.ro",
 } as const;
 

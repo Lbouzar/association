@@ -60,7 +60,7 @@ export default function ContactContent() {
                 <span className="block text-xs font-medium uppercase tracking-widest text-foreground">
                   {c.addressLabel}
                 </span>
-                <span className="mt-1 block">{companyInfo.address}</span>
+                <span className="mt-1 block">{c.addressValue}</span>
               </li>
               <li>
                 <span className="block text-xs font-medium uppercase tracking-widest text-foreground">
