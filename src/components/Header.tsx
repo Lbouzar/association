@@ -75,7 +75,7 @@ export default function Header() {
           <LanguageSwitcher dark={!solid} />
           <button
             type="button"
-            aria-label="Ouvrir le menu"
+            aria-label="Deschide meniul"
             onClick={() => setOpen((v) => !v)}
             className="flex h-10 w-10 flex-col items-center justify-center gap-1.5"
           >

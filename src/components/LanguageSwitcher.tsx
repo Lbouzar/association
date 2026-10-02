@@ -9,7 +9,7 @@ type LanguageSwitcherProps = {
 export default function LanguageSwitcher({ dark = false }: LanguageSwitcherProps) {
   const { locale, setLocale } = useLocale();
 
-  function optionClasses(target: "fr" | "en") {
+  function optionClasses(target: "ro" | "en") {
     const active = locale === target;
     if (dark) {
       return active
@@ -25,15 +25,15 @@ export default function LanguageSwitcher({ dark = false }: LanguageSwitcherProps
     <div
       className="flex items-center gap-1.5 text-xs font-medium uppercase tracking-widest"
       role="group"
-      aria-label="Choix de la langue / Language switch"
+      aria-label="Alegere limbă / Language switch"
     >
       <button
         type="button"
-        onClick={() => setLocale("fr")}
-        className={optionClasses("fr")}
-        aria-pressed={locale === "fr"}
+        onClick={() => setLocale("ro")}
+        className={optionClasses("ro")}
+        aria-pressed={locale === "ro"}
       >
-        FR
+        RO
       </button>
       <span className={dark ? "text-ivory/40" : "text-line"}>/</span>
       <button

@@ -51,7 +51,7 @@ export default function ContactForm() {
         const data = (await response.json().catch(() => null)) as
           | { error?: string }
           | null;
-        throw new Error(data?.error ?? "Une erreur est survenue.");
+        throw new Error(data?.error ?? "A apărut o eroare.");
       }
 
       setStatus("success");
@@ -59,7 +59,7 @@ export default function ContactForm() {
     } catch (error) {
       setStatus("error");
       setErrorMessage(
-        error instanceof Error ? error.message : "Une erreur est survenue."
+        error instanceof Error ? error.message : "A apărut o eroare."
       );
     }
   }

@@ -28,23 +28,23 @@ export async function POST(request: Request) {
     body = await request.json();
   } catch {
     return NextResponse.json(
-      { error: "Corps de requête invalide." },
+      { error: "Corp de cerere invalid." },
       { status: 400 }
     );
   }
 
   if (!isValidPayload(body)) {
     return NextResponse.json(
-      { error: "Merci de compléter les champs obligatoires du formulaire." },
+      { error: "Te rugăm să completezi câmpurile obligatorii din formular." },
       { status: 400 }
     );
   }
 
-  // TODO: brancher un service d'envoi d'email (ex. Resend, Nodemailer, SendGrid)
-  // en utilisant les variables d'environnement du projet une fois le contenu
-  // et l'hébergement définitifs confirmés. Pour l'instant, la requête est
-  // journalisée côté serveur afin de valider le flux de bout en bout.
-  console.info("Nouveau message de contact reçu :", {
+  // TODO: conectați un serviciu de trimitere a emailurilor (ex. Resend, Nodemailer, SendGrid)
+  // folosind variabilele de mediu ale proiectului odată ce conținutul și
+  // găzduirea finală sunt confirmate. Pentru moment, cererea este
+  // înregistrată pe server pentru a valida fluxul complet.
+  console.info("Mesaj de contact nou primit:", {
     name: body.name,
     email: body.email,
     company: body.company,

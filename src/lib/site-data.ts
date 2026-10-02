@@ -1,11 +1,11 @@
-// Coordonnées et informations institutionnelles centralisées.
-// Le contenu éditorial (textes des pages) est géré via src/lib/i18n (FR/EN).
+// Coordonate și informații instituționale centralizate.
+// Conținutul editorial (textele paginilor) este gestionat prin src/lib/i18n (RO/EN).
 
 export const companyInfo = {
   name: "A2PA",
-  legalForm: "Public Affairs & Policy Advisory — structure juridique à confirmer",
-  siret: "SIRET / CUI à compléter",
-  address: "Bucarest, Roumanie (adresse à compléter)",
+  legalForm: "SRL",
+  siret: "CUI de completat",
+  address: "București, România (adresă de completat)",
   email: "contact@a2pa.ro",
   phone: "+40 7 00 00 00 00",
   mapEmbedUrl:
@@ -14,6 +14,7 @@ export const companyInfo = {
 
 export const associationInfo = {
   name: "Friends of A2PA",
-  legalForm: "Association roumaine à but non lucratif (enregistrement en cours)",
+  legalForm: "Asociație română non-profit (înregistrare în curs)",
   email: "association@a2pa.ro",
 } as const;
+

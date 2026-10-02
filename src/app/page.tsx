@@ -37,7 +37,7 @@ export default function Home() {
               {home.heroLead}
             </p>
           </Reveal>
-          <Reveal delay={280}>
+          <Reveal delay={200}>
             <div className="mt-12 flex flex-col gap-4 sm:ml-16 sm:flex-row">
               <MagneticButton>
                 <Link
@@ -72,105 +72,29 @@ export default function Home() {
         </div>
       </Section>
 
-      {/* APPROCHE */}
       <Section
         id="approche"
         tone="soft"
         align="indent"
-        eyebrow={home.approachEyebrow}
-        title={home.approachTitle}
+        eyebrow={home.capabilitiesEyebrow}
+        title={home.capabilitiesTitle}
       >
-        <div className="max-w-2xl space-y-6 sm:ml-24">
-          {home.approachParagraphs.map((p) => (
-            <p key={p} className="text-base leading-relaxed text-foreground-muted">
-              {p}
-            </p>
-          ))}
-        </div>
-      </Section>
-
-      <Section eyebrow={home.introEyebrow} title={home.capabilitiesTitle} description={home.capabilitiesIntro}>
         <EditorialList items={home.capabilities} />
-        <p className="mt-10 max-w-xl text-sm italic leading-relaxed text-foreground-muted sm:ml-12">
-          {home.capabilitiesNote}
-        </p>
       </Section>
 
-      <Section tone="soft" align="indent" eyebrow={home.audienceEyebrow} title={home.audienceTitle}>
+      <Section eyebrow={home.audienceEyebrow} title={home.audienceTitle}>
         <EditorialList items={home.audiences} />
       </Section>
 
-      {/* SERVICES */}
-      <Section eyebrow={home.servicesEyebrow} title={home.servicesTitle} description={home.servicesGroup1Intro}>
-        <h3 className="font-serif text-xl text-foreground sm:text-2xl">{home.servicesGroup1Title}</h3>
-        <div className="mt-6">
-          <EditorialList items={home.servicesGroup1} />
-        </div>
-      </Section>
-
-      <Section
-        tone="soft"
-        align="indent"
-        eyebrow={home.servicesGroup2Title}
-        title={home.servicesGroup2Title}
-        description={home.servicesGroup2Intro}
-      >
-        <EditorialList items={home.servicesGroup2} />
-      </Section>
-
-      <Section eyebrow={home.labEyebrow} title={home.labTitle} description={home.labIntro}>
+      <Section tone="soft" align="indent" eyebrow={home.labEyebrow} title={home.labTitle} description={home.labIntro}>
         <EditorialList items={home.labFormats} />
-        <p className="mt-10 max-w-xl text-sm italic leading-relaxed text-foreground-muted sm:ml-12">
-          {home.labNote}
-        </p>
       </Section>
 
-      <Section tone="soft" align="indent" eyebrow={home.partnerEyebrow} title={home.partnerTitle} description={home.partnerIntro}>
+      <Section eyebrow={home.partnerEyebrow} title={home.partnerTitle}>
         <EditorialList items={home.partnerSupport} />
-        <p className="mt-10 max-w-xl text-sm italic leading-relaxed text-foreground-muted sm:ml-12">
-          {home.partnerNote}
-        </p>
       </Section>
 
-      <Section eyebrow={home.deliveryEyebrow} title={home.deliveryTitle}>
-        <div className="max-w-2xl space-y-4 sm:ml-12">
-          {home.deliveryParagraphs.map((p) => (
-            <p key={p} className="text-base leading-relaxed text-foreground-muted">
-              {p}
-            </p>
-          ))}
-        </div>
-        <div className="mt-10">
-          <EditorialList items={home.deliveryPoints} />
-        </div>
-      </Section>
-
-      <Section tone="soft" align="indent" eyebrow={home.valuesEyebrow} title={home.valuesTitle} description={home.valuesIntro}>
-        <EditorialList items={home.values} />
-        <p className="mt-10 max-w-xl text-sm italic leading-relaxed text-foreground-muted sm:ml-12">
-          {home.valuesNote}
-        </p>
-      </Section>
-
-      {/* TEASER ASSOCIATION */}
-      <Section
-        tone="soft"
-        align="indent"
-        eyebrow={home.associationTeaserEyebrow}
-        title={home.associationTeaserTitle}
-        description={home.associationTeaserDescription}
-      >
-        <div className="sm:ml-24">
-          <Link
-            href="/association"
-            className="btn-sweep border border-foreground px-7 py-3.5 text-xs font-medium uppercase tracking-widest text-foreground transition-colors duration-300 hover:border-gold hover:bg-gold hover:text-ivory"
-          >
-            {home.associationTeaserCta}
-          </Link>
-        </div>
-      </Section>
-
-      {/* CLOSING / CONTACT CTA */}
+      {/* CONTACT CTA */}
       <section className="surface-dark relative overflow-hidden py-28 sm:py-36">
         <CursorGlow />
         <div className="pointer-events-none absolute inset-0 opacity-[0.05]">
@@ -180,21 +104,12 @@ export default function Home() {
         </div>
         <div className="relative mx-auto max-w-6xl px-6">
           <Reveal>
-            <p className="text-xs font-medium uppercase tracking-widest text-gold">
-              {home.closingEyebrow}
-            </p>
-            <h2 className="mt-4 max-w-3xl font-serif text-4xl font-normal leading-[1.05] tracking-tight text-ivory sm:text-5xl">
-              {home.closingTitle}
-            </h2>
-            <p className="mt-6 max-w-xl text-base leading-relaxed text-ivory/70">
-              {home.closingDescription}
-            </p>
             <MagneticButton className="mt-10">
               <Link
                 href="/contact"
                 className="btn-sweep inline-block border border-gold bg-gold px-7 py-3.5 text-xs font-medium uppercase tracking-widest text-pine transition-colors duration-300"
               >
-                {home.closingCta}
+                {home.heroPrimaryCta}
               </Link>
             </MagneticButton>
           </Reveal>
@@ -203,9 +118,5 @@ export default function Home() {
     </div>
   );
 }
-
-
-
-
 
 

@@ -1,4 +1,4 @@
-export type Locale = "fr" | "en";
+export type Locale = "ro" | "en";
 
 export type ListItem = { title: string; description: string };
 
@@ -10,7 +10,6 @@ export type Dictionary = {
     contactCta: string;
   };
   footer: {
-    tagline: string;
     companyLabel: string;
     associationLabel: string;
     navigationLabel: string;
@@ -20,7 +19,6 @@ export type Dictionary = {
     heroEyebrow: string;
     heroTitle: string;
     heroLead: string;
-    heroParagraph: string;
     heroPrimaryCta: string;
     heroSecondaryCta: string;
 
@@ -28,65 +26,24 @@ export type Dictionary = {
     introTitle: string;
     introParagraphs: string[];
 
-    approachEyebrow: string;
-    approachTitle: string;
-    approachParagraphs: string[];
-
     capabilitiesEyebrow: string;
     capabilitiesTitle: string;
     capabilitiesIntro: string;
     capabilities: ListItem[];
-    capabilitiesNote: string;
 
     audienceEyebrow: string;
     audienceTitle: string;
     audiences: ListItem[];
 
-    servicesEyebrow: string;
-    servicesTitle: string;
-    servicesGroup1Title: string;
-    servicesGroup1Intro: string;
-    servicesGroup1: ListItem[];
-    servicesGroup2Title: string;
-    servicesGroup2Intro: string;
-    servicesGroup2: ListItem[];
-
     labEyebrow: string;
     labTitle: string;
     labIntro: string;
     labFormats: string[];
-    labNote: string;
 
     partnerEyebrow: string;
     partnerTitle: string;
     partnerIntro: string;
     partnerSupport: string[];
-    partnerNote: string;
-
-    deliveryEyebrow: string;
-    deliveryTitle: string;
-    deliveryParagraphs: string[];
-    deliveryPoints: string[];
-
-    valuesEyebrow: string;
-    valuesTitle: string;
-    valuesIntro: string;
-    values: string[];
-    valuesNote: string;
-
-    teamEyebrow: string;
-    teamTitle: string;
-    teamDescription: string;
-
-    associationTeaserEyebrow: string;
-    associationTeaserTitle: string;
-    associationTeaserDescription: string;
-    associationTeaserCta: string;
-
-    closingEyebrow: string;
-    closingTitle: string;
-    closingDescription: string;
-    closingCta: string;
   };
   association: {
     heroEyebrow: string;

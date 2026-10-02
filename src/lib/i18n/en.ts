@@ -8,70 +8,51 @@ const en: Dictionary = {
     contactCta: "Contact us",
   },
   footer: {
-    tagline:
-      "Romanian public affairs and policy advisory firm — and an independent non-profit association working for a more informed, participatory and transparent public sphere.",
     companyLabel: "Company",
     associationLabel: "Association",
     navigationLabel: "Navigation",
     rights: "All rights reserved.",
   },
   home: {
-    heroEyebrow: "Public Affairs & Policy Advisory",
-    heroTitle:
-      "Romanian public affairs. European perspective. Strategic action.",
+    heroEyebrow: "Who we are",
+    heroTitle: "Turning policy complexity into strategic influence",
     heroLead:
-      "A2PA is an independent Romanian public affairs and policy advisory firm helping organisations navigate political and regulatory complexity across Romania and the European Union.",
-    heroParagraph:
-      "We combine policy intelligence, stakeholder understanding and strategic engagement to help our clients anticipate change, develop credible positions and contribute effectively to public policy.",
+      "A2PA helps organisations anticipate change, understand how decisions are made, shape credible positions and engage effectively with institutions and stakeholders.",
     heroPrimaryCta: "Discuss a mandate",
     heroSecondaryCta: "Explore our approach",
 
-    introEyebrow: "Why it matters",
-    introTitle: "Public decisions shape business and society",
+    introEyebrow: "Who we are",
+    introTitle: "Turning policy complexity into strategic influence",
     introParagraphs: [
-      "Political and regulatory developments can affect an organisation's ability to operate, invest, grow or deliver its objectives.",
-      "Yet understanding what is changing is only the starting point. Effective public affairs requires a clear reading of the policy environment, an understanding of the actors and interests involved, a credible position and a disciplined strategy for engagement.",
-      "A2PA helps organisations move from information to insight, from insight to strategy and from strategy to action.",
-      "We work across sectors and focus on the issues where public policy, regulation and institutional decisions have a material impact.",
+      "Our role is not simply to report on the policy environment. It is to help partners understand what matters, determine where they can make a difference and engage with the right actors, through the right institutional channels, at the right moment.",
+      "We combine strategic analysis with practical public affairs support to help organisations move from uncertainty to clarity, from clarity to influence and from influence to measurable results.",
     ],
 
-    approachEyebrow: "Our positioning",
-    approachTitle: "Built in Romania. Informed by Europe.",
-    approachParagraphs: [
-      "A2PA is a Romanian public affairs firm with a European outlook.",
-      "Our approach is informed by experience across the European policy environment and the Romanian public sector, supported by advanced academic expertise in political and economic affairs.",
-      "This perspective allows us to connect European policy dynamics with Romanian institutional realities, national stakeholders and implementation challenges.",
-      "For international organisations, A2PA can complement existing European or Brussels-based public affairs structures with Romanian intelligence, engagement and delivery capacity.",
-      "For Romanian organisations, we provide the perspective and tools required to navigate both local dynamics and an increasingly interconnected European policy environment.",
-    ],
-
-    capabilitiesEyebrow: "How we work",
-    capabilitiesTitle: "From policy intelligence to institutional action",
-    capabilitiesIntro: "A2PA's work is built around four connected capabilities.",
+    capabilitiesEyebrow: "Our approach",
+    capabilitiesTitle: "Our approach is built around four connected capabilities",
+    capabilitiesIntro: "",
     capabilities: [
       {
-        title: "Anticipate",
+        title: "01 — Anticipate",
         description:
-          "We monitor political, regulatory and institutional developments, identify emerging issues and assess what they may mean for our clients.",
+          "We monitor political, regulatory and institutional developments to identify emerging issues, assess their potential impact and provide early insight into the opportunities and risks ahead.",
       },
       {
-        title: "Understand",
+        title: "02 — Understand",
         description:
-          "We analyse decision-making processes, stakeholder interests, institutional dynamics and the arguments capable of influencing a policy outcome.",
+          "We analyse how decisions are shaped, identifying the relevant institutions, stakeholders, interests, power dynamics and arguments capable of influencing a policy outcome.",
       },
       {
-        title: "Position",
+        title: "03 — Position",
         description:
-          "We help clients develop clear, evidence-based and institutionally credible positions, including policy papers, consultation responses, advocacy materials and legislative amendments.",
+          "We help clients develop clear, evidence-based and institutionally credible positions. This may include policy papers, consultation responses, advocacy materials, legislative amendments, briefing documents and stakeholder messages.",
       },
       {
-        title: "Engage",
+        title: "04 — Engage",
         description:
-          "We translate strategy into action through institutional relations, stakeholder engagement, coalition building, policy dialogue and targeted advocacy.",
+          "We translate strategy into action through institutional relations, stakeholder engagement, coalition building, policy dialogue, targeted advocacy and purpose-driven initiatives.",
       },
     ],
-    capabilitiesNote:
-      "We do not reduce public affairs to a list of contacts or isolated meetings. Effective engagement depends on timing, evidence, credibility and a clear sequence of action.",
 
     audienceEyebrow: "Who we support",
     audienceTitle: "Who we support",
@@ -103,162 +84,25 @@ const en: Dictionary = {
       },
     ],
 
-    servicesEyebrow: "What we offer",
-    servicesTitle: "Our services",
-    servicesGroup1Title: "1. Private-sector public affairs",
-    servicesGroup1Intro:
-      "A2PA helps companies, associations and professional organisations understand their policy environment and engage effectively with the stakeholders who shape it.",
-    servicesGroup1: [
-      {
-        title: "Policy monitoring and analysis",
-        description:
-          "Structured monitoring of political, regulatory and institutional developments, with a focus on relevance, implications and recommended action.",
-      },
-      {
-        title: "Policy intelligence",
-        description:
-          "We transform complex information into actionable insight through impact analysis, stakeholder intelligence, decision-maker briefings, scenarios and strategic recommendations.",
-      },
-      {
-        title: "Stakeholder engagement and institutional relations",
-        description:
-          "We map the relevant policy ecosystem, identify interests and positions, prepare engagement strategies and support constructive dialogue with decision-makers and stakeholders.",
-      },
-      {
-        title: "Advocacy Lab",
-        description:
-          "A2PA Advocacy Lab creates structured spaces for policy dialogue, stakeholder engagement and evidence-based advocacy: policy roundtables, expert briefings, stakeholder workshops, closed-door consultations, public policy forums, coalition meetings and issue-specific dialogue programmes.",
-      },
-      {
-        title: "Legislative drafting and amendment development",
-        description:
-          "We help organisations translate their policy objectives into precise, credible and workable legislative proposals, amendments, consultation responses and policy recommendations.",
-      },
-      {
-        title: "Strategic issues and crisis support",
-        description:
-          "When political, regulatory or reputational exposure increases, we provide rapid analysis, scenario planning, stakeholder advice, institutional coordination and strategic communications support.",
-      },
-    ],
-    servicesGroup2Title: "2. Public policy, development and funding",
-    servicesGroup2Intro:
-      "A2PA supports public-sector organisations seeking to develop better policies and projects with tangible public impact.",
-    servicesGroup2: [
-      {
-        title: "Policy and programme design",
-        description:
-          "Developing policies and programmes that are evidence-based, implementable and aligned with institutional priorities.",
-      },
-      {
-        title: "Stakeholder consultation",
-        description:
-          "Engaging relevant public, private and civil-society stakeholders to improve policy design, legitimacy and implementation.",
-      },
-      {
-        title: "EU funding strategy",
-        description:
-          "Identifying relevant European funding opportunities and aligning institutional priorities with the objectives, requirements and evaluation criteria of available programmes.",
-      },
-      {
-        title: "Project development",
-        description:
-          "Turning public priorities into structured, fundable projects with clear objectives, partners, activities, budgets and expected outcomes.",
-      },
-      {
-        title: "Grant writing and application preparation",
-        description:
-          "Preparing high-quality funding applications, supporting the development of project narratives and ensuring consistency between objectives, activities, impact and funding requirements.",
-      },
-      {
-        title: "Partnerships and consortium building",
-        description:
-          "Identifying and coordinating relevant institutional, technical, academic and private-sector partners for the development and delivery of European projects.",
-      },
-      {
-        title: "Implementation and impact",
-        description:
-          "Supporting project delivery, stakeholder coordination, monitoring, evaluation and the communication of results.",
-      },
-    ],
-    labEyebrow: "A2PA Advocacy Lab",
-    labTitle: "Creating the conditions for better policy dialogue",
+    labEyebrow: "Advocacy Lab",
+    labTitle: "Creating the conditions for effective policy influence",
     labIntro:
-      "Policy influence is stronger when the right evidence, perspectives and decision-makers meet in a credible and well-prepared setting. A2PA Advocacy Lab is a flexible platform for designing and delivering policy dialogue around a specific issue, reform or public decision. It can be used to:",
+      "A2PA's Advocacy Lab helps private-sector organisations turn policy intelligence into structured engagement and credible influence. We design targeted advocacy initiatives around a clearly defined policy objective, combining analysis, stakeholder engagement and institutional relations. Each initiative is built to identify the right actors, clarify the relevant arguments, create meaningful dialogue and build momentum around a policy issue. The Advocacy Lab may include:",
     labFormats: [
-      "examine emerging policy challenges",
-      "test and refine policy positions",
-      "bring together decision-makers and affected stakeholders",
-      "build informed coalitions",
-      "generate evidence and practical recommendations",
-      "support constructive public debate",
+      "Policy monitoring and analysis",
+      "Stakeholder engagement and institutional relations",
+      "Custom policy events, including roundtables, workshops, briefings and forums",
     ],
-    labNote:
-      "Each Lab is tailored to the issue at hand. Its format, participants and outputs are determined by the policy objective — not by a fixed event template.",
 
-    partnerEyebrow: "For consultancies",
-    partnerTitle: "A confidential delivery partner for consultancies",
-    partnerIntro:
-      "Public affairs and strategic communications mandates increasingly require local intelligence, national engagement and specialist delivery capacity. A2PA supports consultancies working on Romanian, European or regional assignments through flexible and confidential collaboration. Support may include:",
+    partnerEyebrow: "Government for Tomorrow",
+    partnerTitle: "Helping public authorities turn better policy into practical progress",
+    partnerIntro: "",
     partnerSupport: [
-      "Romanian political and regulatory monitoring",
-      "stakeholder research and mapping",
-      "national-level policy analysis",
-      "institutional engagement",
-      "legislative and policy drafting",
-      "advocacy strategy",
-      "policy events and stakeholder convening",
-      "project-based research and delivery",
+      "Policy and programme design",
+      "EU funding strategy",
+      "Grant writing and application preparation",
+      "Project development",
     ],
-    partnerNote:
-      "Where appropriate, A2PA can work on a white-label basis as an extension of the lead consultancy's team. The model is designed to provide reliable Romanian capacity, clear responsibility and senior-level quality without unnecessary structural complexity.",
-
-    deliveryEyebrow: "How we deliver",
-    deliveryTitle: "A flexible model for complex mandates",
-    deliveryParagraphs: [
-      "A2PA works through both retained advisory mandates and project-based assignments. Every engagement begins with a clear understanding of:",
-    ],
-    deliveryPoints: [
-      "the decision, risk or opportunity at stake",
-      "the relevant political and regulatory context",
-      "the stakeholder landscape",
-      "the client's objectives",
-      "the appropriate timeline and indicators of progress",
-    ],
-
-    valuesEyebrow: "Our principles",
-    valuesTitle: "Independent public affairs. Responsible influence.",
-    valuesIntro:
-      "Public affairs creates lasting value only when it is credible, transparent and defensible. A2PA is independent and politically non-partisan. It is not affiliated with any political party, global consulting network or external institutional interest. Our work is guided by:",
-    values: [
-      "democratic values",
-      "transparency",
-      "integrity",
-      "evidence-based advice",
-      "respect for public institutions",
-      "professional discretion",
-      "clear separation between advice, advocacy and decision-making",
-      "compliance with applicable rules and standards of professional deontology",
-    ],
-    valuesNote:
-      "A2PA engages with the full range of legitimate public and private stakeholders while maintaining an independent and responsible position.",
-
-    teamEyebrow: "Our people",
-    teamTitle: "Our team",
-    teamDescription:
-      "Content to come — presentation of the team members, their backgrounds and their expertise.",
-
-    associationTeaserEyebrow: "Our commitment",
-    associationTeaserTitle:
-      "Friends of A2PA — building a more participatory public sphere",
-    associationTeaserDescription:
-      "Friends of A2PA is an independent Romanian non-profit association working to strengthen civic participation, democratic dialogue and transparency in public policymaking through education, culture, research and public engagement.",
-    associationTeaserCta: "Discover the association",
-
-    closingEyebrow: "Let's talk",
-    closingTitle: "Public decisions deserve strategic preparation.",
-    closingDescription:
-      "Whether you need a Romanian public affairs partner, complementary national capacity for a European mandate, a confidential delivery partner or support developing a policy project, A2PA can help you understand the environment, identify the right course of action and engage with credibility.",
-    closingCta: "Start a conversation with A2PA",
   },
   association: {
     heroEyebrow: "Civic & Cultural Association",
@@ -342,7 +186,6 @@ const en: Dictionary = {
           "We develop and support exhibitions, documentaries, artistic projects and other cultural initiatives exploring democratic participation, social cohesion, ecology, cultural heritage, technology and human dignity.",
       },
     ],
-
     whoEyebrow: "Who we work with",
     whoTitle: "Who we work with",
     beneficiariesTitle: "Our direct beneficiaries include",
@@ -462,4 +305,5 @@ const en: Dictionary = {
 };
 
 export default en;
+
 

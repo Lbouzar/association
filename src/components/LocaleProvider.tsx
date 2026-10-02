@@ -31,7 +31,7 @@ export function LocaleProvider({ children }: { children: ReactNode }) {
   // hydration mismatches), then synchronises the UI with the stored value.
   useEffect(() => {
     const stored = window.localStorage.getItem(STORAGE_KEY);
-    if (stored === "fr" || stored === "en") {
+    if (stored === "ro" || stored === "en") {
       // eslint-disable-next-line react-hooks/set-state-in-effect -- one-time sync from localStorage on mount
       setLocaleState(stored);
     }
@@ -44,7 +44,7 @@ export function LocaleProvider({ children }: { children: ReactNode }) {
   }, []);
 
   const toggleLocale = useCallback(() => {
-    setLocale(locale === "fr" ? "en" : "fr");
+    setLocale(locale === "ro" ? "en" : "ro");
   }, [locale, setLocale]);
 
   useEffect(() => {

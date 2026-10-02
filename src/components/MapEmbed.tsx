@@ -3,7 +3,7 @@ type MapEmbedProps = {
   title?: string;
 };
 
-export default function MapEmbed({ src, title = "Localisation" }: MapEmbedProps) {
+export default function MapEmbed({ src, title = "Locație" }: MapEmbedProps) {
   return (
     <div className="overflow-hidden border border-line grayscale invert-[0.92] contrast-[0.9]">
       <iframe
