@@ -278,7 +278,7 @@ const en: Dictionary = {
     formHint: "All required fields must be completed. We reply within 48 business hours.",
     coordinatesTitle: "Our contact details",
     addressLabel: "Address",
-    addressValue: "Bucharest, Romania (address to be confirmed)",
+    addressValue: "4th Biruintei Street, Building A1, Pantelimon, Ilfov, Ro",
     emailLabel: "Email",
     phoneLabel: "Phone",
     mapTitle: "Our location",

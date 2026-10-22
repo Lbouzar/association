@@ -1,0 +1,17 @@
+# Activation du moteur de réécriture Apache (OVH)
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  # Forcer le HTTPS automatiquement
+  RewriteCond %{HTTPS} !=on
+  RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+</IfModule>
+
+# Servir index.html par défaut dans les sous-dossiers
+DirectoryIndex index.html index.php
+
+# Désactiver le listage des répertoires
+Options -Indexes
+
+# Page 404 personnalisée Next.js
+ErrorDocument 404 /404.html

@@ -73,17 +73,6 @@ export default function ContactContent() {
                   {companyInfo.email}
                 </a>
               </li>
-              <li>
-                <span className="block text-xs font-medium uppercase tracking-widest text-foreground">
-                  {c.phoneLabel}
-                </span>
-                <a
-                  href={`tel:${companyInfo.phone.replace(/\s/g, "")}`}
-                  className="link-underline mt-1 inline-block hover:text-foreground"
-                >
-                  {companyInfo.phone}
-                </a>
-              </li>
             </ul>
 
             <div className="mt-8">

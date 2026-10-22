@@ -278,7 +278,7 @@ const ro: Dictionary = {
     formHint: "Toate câmpurile marcate sunt obligatorii. Răspundem în 48 de ore lucrătoare.",
     coordinatesTitle: "Datele noastre de contact",
     addressLabel: "Adresă",
-    addressValue: "București, România (adresă în curs de confirmare)",
+    addressValue: "Strada Biruinței nr 4, Blc A1 Pantelimon, Ilfov, Ro",
     emailLabel: "Email",
     phoneLabel: "Telefon",
     mapTitle: "Locația noastră",

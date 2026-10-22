@@ -7,6 +7,7 @@ import Reveal from "@/components/Reveal";
 import ScrollIndicator from "@/components/ScrollIndicator";
 import CursorGlow from "@/components/CursorGlow";
 import MagneticButton from "@/components/MagneticButton";
+import ParliamentBackdrop from "@/components/ParliamentBackdrop";
 import { useLocale } from "@/components/LocaleProvider";
 
 export default function Home() {
@@ -15,10 +16,11 @@ export default function Home() {
 
   return (
     <div>
-      {/* HERO */}
+      {/* 1ST SLIDE — WHO WE ARE (avec le Parlement roumain uniquement ici) */}
       <section className="surface-dark relative flex min-h-[100vh] items-center overflow-hidden">
+        <ParliamentBackdrop variant="dark" />
         <CursorGlow />
-        <div className="pointer-events-none absolute inset-0 opacity-[0.06]">
+        <div className="pointer-events-none absolute inset-0 opacity-[0.04]">
           <span className="drift absolute -right-24 -top-24 font-serif text-[38rem] leading-none text-ivory">
             2
           </span>
@@ -33,9 +35,16 @@ export default function Home() {
             </h1>
           </Reveal>
           <Reveal delay={150}>
-            <p className="mt-8 max-w-xl text-lg leading-relaxed text-ivory/75 sm:ml-16">
-              {home.heroLead}
-            </p>
+            <div className="mt-8 max-w-2xl space-y-5 sm:ml-16">
+              <p className="text-lg leading-relaxed text-ivory/85">
+                {home.heroLead}
+              </p>
+              {home.introParagraphs.map((p) => (
+                <p key={p} className="text-base leading-relaxed text-ivory/70">
+                  {p}
+                </p>
+              ))}
+            </div>
           </Reveal>
           <Reveal delay={200}>
             <div className="mt-12 flex flex-col gap-4 sm:ml-16 sm:flex-row">
@@ -61,17 +70,7 @@ export default function Home() {
         <ScrollIndicator />
       </section>
 
-      {/* INTRO */}
-      <Section eyebrow={home.introEyebrow} title={home.introTitle}>
-        <div className="max-w-2xl space-y-6 sm:ml-24">
-          {home.introParagraphs.map((p) => (
-            <p key={p} className="text-lg leading-relaxed text-foreground-muted">
-              {p}
-            </p>
-          ))}
-        </div>
-      </Section>
-
+      {/* 2ND SLIDE — OUR APPROACH */}
       <Section
         id="approche"
         tone="soft"
@@ -82,16 +81,28 @@ export default function Home() {
         <EditorialList items={home.capabilities} />
       </Section>
 
-      <Section eyebrow={home.audienceEyebrow} title={home.audienceTitle}>
-        <EditorialList items={home.audiences} />
-      </Section>
-
-      <Section tone="soft" align="indent" eyebrow={home.labEyebrow} title={home.labTitle} description={home.labIntro}>
+      {/* 3RD SLIDE — OUR SERVICES 1/2 : ADVOCACY LAB */}
+      <Section
+        eyebrow={home.labEyebrow}
+        title={home.labTitle}
+        description={home.labIntro}
+      >
         <EditorialList items={home.labFormats} />
       </Section>
 
-      <Section eyebrow={home.partnerEyebrow} title={home.partnerTitle}>
+      {/* 4TH SLIDE — OUR SERVICES 2/2 : GOVERNMENT FOR TOMORROW */}
+      <Section
+        tone="soft"
+        align="indent"
+        eyebrow={home.partnerEyebrow}
+        title={home.partnerTitle}
+      >
         <EditorialList items={home.partnerSupport} />
+      </Section>
+
+      {/* 5TH SLIDE — WHO WE SUPPORT */}
+      <Section eyebrow={home.audienceEyebrow} title={home.audienceTitle}>
+        <EditorialList items={home.audiences} />
       </Section>
 
       {/* CONTACT CTA */}

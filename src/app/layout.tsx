@@ -24,6 +24,7 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://a2pa.eu"),
   title: {
     default: "A2PA — Public Affairs & Policy Advisory",
     template: "%s — A2PA",
